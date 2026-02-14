@@ -1,13 +1,101 @@
 Doubts Html: 
 What is spellcheck in a input tag "spellcheck : false"
-
+-- Browser checks for the spelling and underlines with the red for incorrect spellings 
 
 
 
 Doubts css: 
-Difference between background and bgcolor in css 
-what is outline property in css 
+Difference between background and bgcolor in css  -- background is the shorthand that includes bg color, bg image and other properties also 
+what is outline property in css -- the outline property in css draws a line outside border, ussually used during focus statements 
 what does flex: 1; mean
+--answer is a bit long and hence pasting the entire chat 
+Good question 👍 — this is very important in Flexbox.
+
+📌 flex: 1; in CSS
+
+When you write:
+
+flex: 1;
+
+
+It is a shorthand for:
+
+flex: 1 1 0%;
+
+
+Which means:
+
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+
+📌 What Each Part Means
+1️⃣ flex-grow: 1
+
+The item will grow and take up available space.
+
+If multiple items have flex: 1, they share space equally.
+
+2️⃣ flex-shrink: 1
+
+The item is allowed to shrink if needed.
+
+3️⃣ flex-basis: 0%
+
+Initial size is 0, so space is distributed evenly based on grow value.
+
+📌 Example
+<div class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+.container {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+}
+
+
+👉 All 3 boxes will take equal width.
+
+📌 If One Item Has More Grow
+.box1 {
+  flex: 2;
+}
+
+.box2 {
+  flex: 1;
+}
+
+
+Now:
+
+box1 takes 2 parts
+
+box2 takes 1 part
+
+So box1 is twice as wide.
+
+📌 Simple Way to Remember
+
+flex: 1 means:
+
+"Take equal available space inside a flex container."
+
+📌 When Is It Commonly Used?
+
+Navbar items
+
+Sidebar + content layout
+
+Equal width columns
+
+Cards layout
+
 
 
 
