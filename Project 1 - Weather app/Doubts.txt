@@ -1,0 +1,21 @@
+Doubts Html: 
+What is spellcheck in a input tag "spellcheck : false"
+
+
+
+
+Doubts css: 
+Difference between background and bgcolor in css 
+what is outline property in css 
+what does flex: 1; mean
+
+
+
+
+
+Doubts JS: 
+Math.round() -- How to know that this even existed -- can i use chatgpt to understand that i can use this one also
+
+
+--I learned -- 
+On loading of website it shows the demo card info, we want that demo card info not to show, hence it will only show when the search btn is clicked 
