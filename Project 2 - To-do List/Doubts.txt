@@ -1,0 +1,35 @@
+Html
+
+
+
+Css 
+--I learned -- In margin if 3 values are given that mean top, left&right , bottom (margin: 100px auto 20px;)
+--I learned -- to make a div center its not necessary to make it flex and center everytime, we can also do it using margin left and right = auto 
+--I learned -- Flex:1 Means it will take full width (according to the video)
+
+
+What is user select: none in css -- can set wheather a user can select or highlight the text on the webpage 
+
+
+
+Important code block to understand 
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+\u00d7 -- This code for Cross icon 
+
+
+
+
+Js
