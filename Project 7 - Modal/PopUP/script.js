@@ -48,3 +48,20 @@ window.addEventListener('keydown', (btn) => {
         }
     }
 })
+
+
+
+// Adding the feature of clicking outside notification closes the box
+
+layer.addEventListener('click', (e)=>{
+    console.log(e.target);
+    
+    if(e.target == layer){
+        noti.style.display = "none"
+        blureach()
+        isblurred = false
+        layer.style.zIndex = "-10";
+        
+    }
+})
+
