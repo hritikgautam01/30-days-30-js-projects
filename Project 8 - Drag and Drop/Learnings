@@ -1,0 +1,7 @@
+What is Event bubbling 
+
+draggable = true in html to make it draggable
+<div class="list" draggable="true"></div>
+
+
+Event listeners used for dragging -- dragstart, dragover, drop,
