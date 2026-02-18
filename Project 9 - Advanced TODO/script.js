@@ -3,6 +3,10 @@ let todos = [
         
 ]
 
+
+ todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+
 let noOfTasks = 0;
 
 let addbtn = document.querySelector("#addbtn")
@@ -25,6 +29,7 @@ addbtn.addEventListener('click', ()=>{
     })
 
     input.value = "";
+    saveToLocalStorage();
     renderList();
 })
 
@@ -39,6 +44,7 @@ weblist.addEventListener('click', (e)=>{
 
         todos = todos.filter(todo => todo.text != text)
 
+        saveToLocalStorage();
         renderList();
     }
 
@@ -51,6 +57,7 @@ weblist.addEventListener('click', (e)=>{
             if(todo.text === txt){
                 todo.beingEdited = !todo.beingEdited;
             }
+            saveToLocalStorage();
             return todo
         })
                 
@@ -70,6 +77,7 @@ weblist.addEventListener('click', (e)=>{
             }
             return todo
         })
+        saveToLocalStorage();
         renderList()
     }
 
@@ -110,6 +118,7 @@ function renderList(){
                     todo.text = li.querySelector('input').value;
                     // console.log(li.querySelector('input').value)
                     todo.beingEdited = false;
+                    saveToLocalStorage();
                     renderList()
                 }
             })
@@ -192,3 +201,11 @@ const modebtn = document.querySelector('.mode')
 modebtn.addEventListener('click', ()=>{
     document.querySelector('body').classList.toggle('darkmode')
 })
+
+
+function saveToLocalStorage() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+
+renderList()

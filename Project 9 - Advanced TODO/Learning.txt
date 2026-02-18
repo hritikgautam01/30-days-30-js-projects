@@ -1,0 +1,9 @@
+Learning local storage using gpt
+
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+function saveToLocalStorage() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+json.stringify --important to learn 
