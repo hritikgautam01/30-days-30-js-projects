@@ -10,6 +10,9 @@ let input = document.querySelector('#inputfield')
 const weblist = document.querySelector("ul")
 
 
+
+
+
 addbtn.addEventListener('click', ()=>{
     if(input.value.trim() === "") return;
 
@@ -111,7 +114,81 @@ function renderList(){
                 }
             })
         }
-
         weblist.appendChild(li)
     })
+
+
+    // Code may become very long and being repeated but rn i am in a hurry and dont wanna think a lot, hence i am continuing the change logic here only
+
+    let select = document.querySelector('select')
+    select.addEventListener('change', (e) =>{
+        if(e.target.value === 'completed'){
+            weblist.innerHTML = ""
+
+            todos.forEach( todo =>{
+                let li = document.createElement("li")
+                li.classList.add("listitem")
+
+                if(todo.completed){
+                    li.innerHTML = `
+                        <div class="tickdiv ${todo.completed? "completed": ""}"></div>
+                        <span>${todo.text}</span>
+                        <div class="editdelete">
+                            <img src="./images/edit.png" class="edit">
+                            <img src="./images/bin.png" class="delete">
+                        </div>
+                    `
+                    weblist.appendChild(li)
+                }
+                
+            })
+        }
+        if(e.target.value === 'all'){
+            weblist.innerHTML = ""
+
+            todos.forEach( todo =>{
+                let li = document.createElement("li")
+                li.classList.add("listitem")
+
+                if(1){
+                    li.innerHTML = `
+                        <div class="tickdiv ${todo.completed? "completed": ""}"></div>
+                        <span>${todo.text}</span>
+                        <div class="editdelete">
+                            <img src="./images/edit.png" class="edit">
+                            <img src="./images/bin.png" class="delete">
+                        </div>
+                    `
+                    weblist.appendChild(li)
+                }
+                
+            })
+        }
+        if(e.target.value === 'incomplete'){
+            weblist.innerHTML = ""
+
+            todos.forEach( todo =>{
+                let li = document.createElement("li")
+                li.classList.add("listitem")
+
+                if(!todo.completed){
+                    li.innerHTML = `
+                        <div class="tickdiv ${todo.completed? "completed": ""}"></div>
+                        <span>${todo.text}</span>
+                        <div class="editdelete">
+                            <img src="./images/edit.png" class="edit">
+                            <img src="./images/bin.png" class="delete">
+                        </div>
+                    `
+                    weblist.appendChild(li)
+                }
+                
+            })
+        }
+    })
 }
+
+const modebtn = document.querySelector('.mode')
+modebtn.addEventListener('click', ()=>{
+    document.querySelector('body').classList.toggle('darkmode')
+})

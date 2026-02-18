@@ -80,6 +80,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #dropdown select{
@@ -89,6 +90,7 @@ h1{
     background-color: var(--purple);
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .mode{
@@ -99,6 +101,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .mode img{
@@ -174,3 +177,17 @@ h1{
     outline: none;
 }
 
+
+.darkmode{
+    background-color: black;
+    color: white;
+}
+
+.darkmode input{
+    background-color: black;
+    color: white;
+}
+
+.darkmode .list-container ul li .editdelete img{
+    filter: invert(1);
+}
