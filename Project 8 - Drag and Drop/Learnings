@@ -5,3 +5,4 @@ draggable = true in html to make it draggable
 
 
 Event listeners used for dragging -- dragstart, dragover, drop,
+Adding e.preventdefault() for the dragover is important, we can forget 

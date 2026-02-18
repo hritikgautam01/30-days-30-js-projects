@@ -1,0 +1,176 @@
+:root{
+    --purple: #6C63FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.topdiv{
+    width: 750px;
+    height: 135px;
+    gap: 18px;
+    padding-top: 40px;
+    /* background-color: rebeccapurple; */
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin: 18px auto;
+    font-size: 26px;
+}
+
+.searchdiv{
+    display: flex;
+    width: 750px;
+    height: 38px;
+    gap: 16px;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+#searchbox{
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #C3C1E5;
+    display: flex;
+    width: 595px;
+    justify-content: space-between ;
+}
+
+#searchbox input{
+    font-size: 16px;
+    color: #c3c1e5;
+    border: none;
+    outline: none;
+    width: 90%;
+
+}
+
+#addbtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+#searchbox img{
+    width: 21px;
+    height: 21px;
+    filter: invert(1) sepia(1) saturate(400%) hue-rotate(230deg)
+          brightness(100%) contrast(80%);
+}
+
+#dropdown{
+    width: 85px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--purple);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dropdown select{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: var(--purple);
+    border: none;
+    outline: none;
+}
+
+.mode{
+    width: 38px;
+    height: 38px;
+    background-color: #6C63FF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode img{
+    width: 22px;
+    height: 22px;
+    filter: invert(1) brightness(2);
+}
+
+
+.list-container{
+    width: 750px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.list-container ul{
+    width: 520px;
+    list-style: none;
+}
+
+.list-container ul li{
+    gap: 12px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border-bottom: 1px solid #C3C1E5;
+}
+
+.list-container ul li .tickdiv{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--purple);
+    border-radius: 2px;
+}
+
+.list-container ul li span{
+    font-size: 16px;
+    width: 420px;
+}
+
+.listitem{
+    display: flex;
+    
+}
+
+.editdelete{
+    width: 62px;
+    padding: auto 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.editdelete img{
+    width: 18px;
+    height: 18px;
+}
+
+.tickdiv.completed {
+    background-image: url("./images/check-mark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    /* filter: invert(1); */
+}
+
+
+.editItemInput{
+    font-size: 16px;
+    width: 420px;
+    border: none;
+    outline: none;
+}
+
